@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: contain;
+}
+
+body {
+  @apply bg-slate-100 text-slate-900 antialiased;
+}
+
+/* タッチ操作を快適にする */
+button,
+a {
+  touch-action: manipulation;
+}
+
+/* iPad/スマホで誤拡大しないように入力欄のフォントを確保 */
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+.animate-pop {
+  animation: pop 0.18s ease-out;
+}
