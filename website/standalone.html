@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>センター薬局｜愛媛県松山市会津町の保険調剤薬局</title>
+<meta name="description" content="愛媛県松山市会津町のセンター薬局。全国どこの医療機関の処方箋もお受けします。在宅服薬指導、一包化、オンライン資格確認・電子処方箋に対応。地域のかかりつけ薬局として、お薬と健康をサポートします。" />
+<meta name="keywords" content="センター薬局,松山市,会津町,調剤薬局,保険調剤,在宅,処方箋,かかりつけ薬局,愛媛" />
+
+<!-- OGP -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="センター薬局｜愛媛県松山市会津町の保険調剤薬局" />
+<meta property="og:description" content="地域のかかりつけ薬局として、お薬と健康を丁寧にサポートします。全国の処方箋に対応・在宅対応。" />
+<meta property="og:locale" content="ja_JP" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet" />
+
+<link rel="icon" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%0A%20%20%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%2211%22%20fill%3D%22%232f8a7e%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M24%2012v24M12%2024h24%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E%0A" type="image/svg+xml" />
+<style>
+/* =========================================================
+   センター薬局 — Website Styles
+   Palette: 落ち着いたグリーン × 温かみのあるベージュ
+   ========================================================= */
+
+:root {
+  --green: #2f8a7e;
+  --green-deep: #1f6359;
+  --green-soft: #e9f1ee;
+  --green-soft-2: #d8e8e2;
+  --cream: #fbf8f3;
+  --beige: #f1e9dd;
+  --gold: #d9a45b;
+  --ink: #2c322f;
+  --ink-soft: #5c655f;
+  --line: #e6e1d6;
+  --white: #ffffff;
+  --shadow-sm: 0 4px 16px rgba(31, 99, 89, .08);
+  --shadow-md: 0 12px 36px rgba(31, 99, 89, .12);
+  --radius: 18px;
+  --max: 1120px;
+  --serif: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+  --sans: "Noto Sans JP", system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+
+.container { width: min(var(--max), 92%); margin-inline: auto; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .55em;
+  padding: .95em 1.8em;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .98rem;
+  letter-spacing: .02em;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+.btn-primary { background: var(--green); color: #fff; box-shadow: var(--shadow-sm); }
+.btn-primary:hover { background: var(--green-deep); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.btn-ghost { background: transparent; color: var(--green-deep); border-color: var(--green); }
+.btn-ghost:hover { background: var(--green); color: #fff; transform: translateY(-2px); }
+.btn-light { background: #fff; color: var(--green-deep); }
+.btn-light:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+/* ---------- Section helpers ---------- */
+.section-head { margin-bottom: 2.6rem; }
+.section-head.center { text-align: center; }
+.section-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+  line-height: 1.4;
+  letter-spacing: .03em;
+}
+.section-title .en {
+  display: block;
+  font-family: var(--sans);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .28em;
+  color: var(--green);
+  margin-bottom: .5rem;
+}
+.section-title.light, .section-title.light .en { color: #fff; }
+.section-title.light .en { color: rgba(255,255,255,.85); }
+.section-desc { color: var(--ink-soft); margin-top: .8rem; font-size: 1rem; }
+.section-label {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  display: flex; align-items: baseline; gap: .8rem;
+}
+.section-label span {
+  font-family: var(--sans); font-size: .72rem; font-weight: 700;
+  letter-spacing: .28em; color: var(--green);
+}
+
+/* =========================================================
+   Header
+   ========================================================= */
+.site-header {
+  position: fixed; inset: 0 0 auto 0; z-index: 50;
+  background: rgba(251, 248, 243, .82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: box-shadow .3s ease, background .3s ease, border-color .3s ease;
+}
+.site-header.scrolled { box-shadow: var(--shadow-sm); border-color: var(--line); background: rgba(251,248,243,.95); }
+.header-inner {
+  width: min(var(--max), 94%); margin-inline: auto;
+  height: 72px; display: flex; align-items: center; gap: 1.4rem;
+}
+.brand { display: flex; align-items: center; gap: .7rem; }
+.brand-mark { display: inline-flex; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+.brand-name { font-family: var(--serif); font-weight: 700; font-size: 1.18rem; letter-spacing: .04em; }
+.brand-sub { font-size: .58rem; letter-spacing: .25em; color: var(--green); font-weight: 700; }
+
+.nav { margin-left: auto; display: flex; gap: 1.6rem; }
+.nav a {
+  position: relative; font-weight: 500; font-size: .95rem; padding: .3em 0; color: var(--ink);
+}
+.nav a::after {
+  content: ""; position: absolute; left: 0; bottom: -2px; height: 2px; width: 0;
+  background: var(--green); transition: width .28s ease;
+}
+.nav a:hover { color: var(--green-deep); }
+.nav a:hover::after { width: 100%; }
+
+.header-tel {
+  display: flex; flex-direction: column; align-items: flex-end; line-height: 1.1;
+  padding-left: 1.2rem; border-left: 1px solid var(--line);
+}
+.header-tel-label { font-size: .62rem; color: var(--ink-soft); letter-spacing: .12em; }
+.header-tel-num { font-family: var(--serif); font-weight: 700; font-size: 1.25rem; color: var(--green-deep); }
+
+.nav-toggle {
+  display: none; flex-direction: column; gap: 5px; width: 42px; height: 42px;
+  border: 0; background: transparent; cursor: pointer; margin-left: auto; padding: 8px;
+}
+.nav-toggle span { height: 2px; width: 100%; background: var(--green-deep); border-radius: 2px; transition: transform .3s, opacity .3s; }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* =========================================================
+   Hero
+   ========================================================= */
+.hero { position: relative; padding-top: 72px; overflow: hidden; }
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(1200px 600px at 75% -10%, var(--green-soft-2), transparent 60%),
+    linear-gradient(160deg, var(--green-soft) 0%, var(--cream) 70%);
+}
+.hero-inner {
+  position: relative; z-index: 1;
+  width: min(var(--max), 92%); margin-inline: auto;
+  display: grid; grid-template-columns: 1.25fr .9fr; gap: 3rem; align-items: center;
+  padding: clamp(3rem, 7vw, 6rem) 0 7rem;
+}
+.hero-eyebrow {
+  display: inline-block; font-size: .82rem; font-weight: 700; letter-spacing: .14em;
+  color: var(--green-deep); background: rgba(255,255,255,.7);
+  padding: .45em 1.1em; border-radius: 999px; margin-bottom: 1.4rem;
+}
+.hero-title {
+  font-family: var(--serif); font-weight: 700;
+  font-size: clamp(2.1rem, 5.6vw, 3.6rem); line-height: 1.35; letter-spacing: .02em;
+  color: var(--ink);
+}
+.hero-lead { margin-top: 1.6rem; color: var(--ink-soft); font-size: 1.02rem; }
+.hero-actions { margin-top: 2.2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.hero-card {
+  background: #fff; border-radius: var(--radius); padding: 1.8rem 1.9rem;
+  box-shadow: var(--shadow-md); border: 1px solid var(--line);
+}
+.hero-card-title {
+  font-family: var(--serif); font-weight: 600; font-size: 1.15rem; color: var(--green-deep);
+  padding-bottom: .9rem; margin-bottom: .4rem; border-bottom: 2px dotted var(--green-soft-2);
+}
+.hero-card-list { list-style: none; }
+.hero-card-list li {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .7rem 0; border-bottom: 1px solid var(--line);
+}
+.hero-card-list li span { color: var(--ink-soft); font-size: .95rem; }
+.hero-card-list li b { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); }
+.hero-card-list li.off b { color: var(--gold); }
+.hero-card-link {
+  display: inline-block; margin-top: 1rem; color: var(--green); font-weight: 700; font-size: .9rem;
+}
+.hero-card-link:hover { color: var(--green-deep); }
+
+.hero-wave { position: absolute; left: 0; right: 0; bottom: -1px; line-height: 0; }
+.hero-wave svg { width: 100%; height: 70px; }
+
+/* =========================================================
+   News
+   ========================================================= */
+.news { background: var(--cream); padding: 3.4rem 0; }
+.news-head { margin-bottom: 1.4rem; }
+.news-list { list-style: none; border-top: 1px solid var(--line); }
+.news-list li {
+  display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap;
+  padding: 1.05rem .4rem; border-bottom: 1px solid var(--line);
+}
+.news-list time { font-size: .88rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; min-width: 86px; }
+.news-tag {
+  font-size: .72rem; font-weight: 700; color: var(--green-deep);
+  background: var(--green-soft); padding: .25em .9em; border-radius: 999px;
+}
+.news-list p { flex: 1 1 320px; font-size: .96rem; color: var(--ink); }
+
+/* =========================================================
+   About
+   ========================================================= */
+.about { padding: clamp(4rem, 8vw, 6.5rem) 0; background: var(--beige); }
+.about-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 3.2rem; align-items: center; }
+.about-visual { position: relative; }
+.about-photo { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); }
+.about-badge {
+  position: absolute; right: -10px; bottom: -16px;
+  background: var(--green); color: #fff; font-family: var(--serif); font-weight: 600;
+  padding: .7em 1.3em; border-radius: 999px; box-shadow: var(--shadow-sm); font-size: .95rem;
+}
+.about-catch {
+  font-family: var(--serif); font-weight: 600; font-size: clamp(1.3rem, 3vw, 1.7rem);
+  color: var(--green-deep); margin: 1.2rem 0 1.4rem; line-height: 1.6;
+}
+.about-text { color: var(--ink-soft); margin-bottom: 1.1rem; }
+.about-sign { margin-top: 1.6rem; text-align: right; color: var(--ink-soft); font-size: .95rem; }
+.about-sign b { font-family: var(--serif); font-size: 1.2rem; color: var(--ink); margin-left: .3em; }
+
+/* =========================================================
+   Services
+   ========================================================= */
+.services { padding: clamp(4rem, 8vw, 6.5rem) 0; background: var(--cream); }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
+.card {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 2rem 1.7rem; transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--green-soft-2); }
+.card-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 56px; height: 56px; border-radius: 16px;
+  background: var(--green-soft); color: var(--green); margin-bottom: 1.1rem;
+}
+.card h3 { font-family: var(--serif); font-weight: 600; font-size: 1.18rem; margin-bottom: .6rem; }
+.card p { color: var(--ink-soft); font-size: .94rem; }
+
+/* =========================================================
+   Home care CTA
+   ========================================================= */
+.home-cta {
+  background: linear-gradient(150deg, var(--green-deep), var(--green));
+  color: #fff; padding: clamp(4rem, 8vw, 6rem) 0;
+}
+.home-cta-inner { display: grid; grid-template-columns: 1.3fr .8fr; gap: 3rem; align-items: center; }
+.home-cta-copy p { color: rgba(255,255,255,.92); margin: 1.2rem 0 1.5rem; }
+.home-cta-points { list-style: none; display: flex; flex-direction: column; gap: .6rem; margin-bottom: 1.9rem; }
+.home-cta-points li { position: relative; padding-left: 1.8rem; font-weight: 500; }
+.home-cta-points li::before {
+  content: "✓"; position: absolute; left: 0; top: 0;
+  width: 1.3rem; height: 1.3rem; color: var(--green-deep); background: #fff;
+  border-radius: 50%; font-size: .8rem; display: grid; place-items: center; font-weight: 700;
+}
+.home-cta-visual svg { width: 100%; max-width: 340px; margin-inline: auto; }
+
+/* =========================================================
+   Hours
+   ========================================================= */
+.hours { padding: clamp(4rem, 8vw, 6.5rem) 0; background: var(--beige); }
+.hours-table-wrap {
+  max-width: 760px; margin-inline: auto; background: #fff; border-radius: var(--radius);
+  padding: clamp(1.6rem, 4vw, 2.6rem); box-shadow: var(--shadow-sm); border: 1px solid var(--line);
+}
+.hours-table { width: 100%; border-collapse: collapse; text-align: center; }
+.hours-table th, .hours-table td {
+  padding: .85rem .4rem; border: 1px solid var(--line); font-size: .95rem;
+}
+.hours-table thead th { background: var(--green); color: #fff; font-weight: 700; }
+.hours-table thead th:first-child { background: var(--green-deep); }
+.hours-table tbody th { background: var(--green-soft); font-weight: 700; color: var(--green-deep); }
+.hours-table td { color: var(--green); font-weight: 700; font-size: 1.1rem; }
+.hours-table td.x { color: var(--ink-soft); }
+
+.hours-notes { list-style: none; margin-top: 1.8rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem 1.6rem; }
+.hours-notes li { display: flex; justify-content: space-between; padding: .55rem .2rem; border-bottom: 1px dashed var(--line); }
+.hours-notes li span { color: var(--ink-soft); }
+.hours-notes li b { font-family: var(--serif); }
+.hours-notes li.off b { color: var(--gold); }
+.hours-emergency {
+  margin-top: 1.6rem; text-align: center; background: var(--green-soft); border-radius: 12px;
+  padding: 1rem; font-size: .95rem; color: var(--green-deep);
+}
+.hours-emergency a { font-family: var(--serif); font-weight: 700; font-size: 1.25rem; margin-left: .5em; color: var(--green-deep); }
+
+/* =========================================================
+   Access
+   ========================================================= */
+.access { padding: clamp(4rem, 8vw, 6.5rem) 0; background: var(--cream); }
+.access-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 2.4rem; align-items: stretch; }
+.access-info dl { display: flex; flex-direction: column; }
+.access-info dl > div {
+  display: grid; grid-template-columns: 100px 1fr; gap: 1rem;
+  padding: .95rem 0; border-bottom: 1px solid var(--line);
+}
+.access-info dt { font-weight: 700; color: var(--green-deep); font-size: .92rem; }
+.access-info dd { color: var(--ink); font-size: .96rem; }
+.access-info dd a { color: var(--green); font-weight: 700; }
+.access-map-btn { margin-top: 1.6rem; }
+.access-map {
+  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--line); min-height: 360px;
+}
+.access-map iframe { width: 100%; height: 100%; min-height: 360px; border: 0; }
+
+/* =========================================================
+   Contact band
+   ========================================================= */
+.contact-band { background: var(--green-deep); color: #fff; padding: 2.6rem 0; }
+.contact-band-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.6rem; flex-wrap: wrap; }
+.contact-band-lead { font-family: var(--serif); font-size: 1.4rem; font-weight: 600; }
+.contact-band-sub { color: rgba(255,255,255,.85); font-size: .92rem; margin-top: .3rem; }
+.contact-band-tel {
+  display: flex; align-items: center; gap: .9rem; background: #fff; color: var(--green-deep);
+  padding: .9rem 1.6rem; border-radius: 14px; font-family: var(--serif); font-weight: 700; font-size: 1.7rem;
+  box-shadow: var(--shadow-md); transition: transform .25s ease;
+}
+.contact-band-tel:hover { transform: translateY(-2px); }
+.contact-band-tel small { display: block; font-family: var(--sans); font-size: .62rem; font-weight: 700; color: var(--ink-soft); letter-spacing: .1em; }
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.site-footer { background: #20312d; color: rgba(255,255,255,.8); padding: 3rem 0 1.4rem; }
+.footer-inner { display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+.site-footer .brand-name { color: #fff; }
+.site-footer .brand-sub { color: var(--green-soft-2); }
+.footer-addr { margin-top: 1rem; font-size: .85rem; line-height: 1.9; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 1.2rem; align-content: flex-start; }
+.footer-nav a { font-size: .9rem; transition: color .2s; }
+.footer-nav a:hover { color: #fff; }
+.copyright {
+  text-align: center; font-size: .76rem; color: rgba(255,255,255,.5);
+  margin-top: 2.4rem; padding-top: 1.4rem; border-top: 1px solid rgba(255,255,255,.12);
+}
+
+/* ---------- To top ---------- */
+.to-top {
+  position: fixed; right: 20px; bottom: 22px; z-index: 40;
+  width: 46px; height: 46px; border-radius: 50%; background: var(--green); color: #fff;
+  display: grid; place-items: center; box-shadow: var(--shadow-md);
+  opacity: 0; pointer-events: none; transform: translateY(10px);
+  transition: opacity .3s ease, transform .3s ease, background .25s;
+}
+.to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.to-top:hover { background: var(--green-deep); }
+
+/* =========================================================
+   Reveal animation
+   ========================================================= */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+.sp-only { display: none; }
+
+@media (max-width: 920px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 2.2rem; padding-bottom: 6rem; }
+  .hero-card { max-width: 460px; }
+  .about-grid { grid-template-columns: 1fr; gap: 2.6rem; }
+  .about-visual { max-width: 460px; margin-inline: auto; }
+  .home-cta-inner { grid-template-columns: 1fr; }
+  .home-cta-visual { order: -1; }
+  .access-grid { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .header-tel { display: none; }
+  .nav-toggle { display: flex; }
+  .nav {
+    position: fixed; inset: 72px 0 auto 0; flex-direction: column; gap: 0;
+    background: rgba(251,248,243,.98); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line); padding: .5rem 0;
+    transform: translateY(-130%); transition: transform .35s ease; box-shadow: var(--shadow-md);
+  }
+  .nav.open { transform: translateY(0); }
+  .nav a { padding: 1rem 8%; width: 100%; border-bottom: 1px solid var(--line); }
+  .nav a::after { display: none; }
+  .sp-only { display: inline; }
+}
+
+@media (max-width: 560px) {
+  body { font-size: 15px; }
+  .cards { grid-template-columns: 1fr; }
+  .hours-notes { grid-template-columns: 1fr; }
+  .access-info dl > div { grid-template-columns: 88px 1fr; }
+  .contact-band-tel { font-size: 1.4rem; padding: .8rem 1.2rem; }
+  .contact-band-inner { justify-content: center; text-align: center; }
+  .news-list time { min-width: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <a href="#hero" class="brand" aria-label="センター薬局 トップへ">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="40" height="40" role="img" aria-hidden="true">
+          <circle cx="24" cy="24" r="23" fill="#2f8a7e"/>
+          <path d="M24 11v26M11 24h26" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">センター薬局</span>
+        <span class="brand-sub">CENTER PHARMACY</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="メインメニュー">
+      <a href="#about">薬局について</a>
+      <a href="#services">サービス</a>
+      <a href="#home">在宅対応</a>
+      <a href="#hours">営業時間</a>
+      <a href="#access">アクセス</a>
+    </nav>
+
+    <a href="tel:089-951-2330" class="header-tel">
+      <span class="header-tel-label">お電話はこちら</span>
+      <span class="header-tel-num">089-951-2330</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">愛媛県松山市会津町 ・ 保険調剤薬局</p>
+      <h1 class="hero-title">
+        まちの健康に、<br />
+        いちばん近い場所へ。
+      </h1>
+      <p class="hero-lead">
+        全国どこの医療機関の処方箋もお受けします。<br />
+        お薬のことから日々の健康相談まで、
+        地域のかかりつけ薬局として
+        ひとりひとりに寄り添います。
+      </p>
+      <div class="hero-actions">
+        <a href="tel:089-951-2330" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1z"/></svg>
+          電話でお問い合わせ
+        </a>
+        <a href="#access" class="btn btn-ghost">アクセス・地図</a>
+      </div>
+    </div>
+
+    <div class="hero-card" aria-label="本日の受付情報">
+      <p class="hero-card-title">受付時間のご案内</p>
+      <ul class="hero-card-list">
+        <li><span>月・火・木・金</span><b>9:00 – 18:00</b></li>
+        <li><span>水曜</span><b>9:00 – 17:00</b></li>
+        <li><span>土曜</span><b>9:00 – 16:00</b></li>
+        <li class="off"><span>日曜・祝日</span><b>休業</b></li>
+      </ul>
+      <a href="#hours" class="hero-card-link">営業時間の詳細 →</a>
+    </div>
+  </div>
+  <div class="hero-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 40 C 240 80 480 0 720 30 C 960 60 1200 10 1440 40 L1440 80 L0 80 Z" fill="#fbf8f3"/></svg>
+  </div>
+</section>
+
+<!-- ===== お知らせ ===== -->
+<section class="news" id="news" aria-label="お知らせ">
+  <div class="container">
+    <div class="news-head">
+      <h2 class="section-label"><span>NEWS</span>お知らせ</h2>
+    </div>
+    <ul class="news-list">
+      <li>
+        <time datetime="2026-04-01">2026.04.01</time>
+        <span class="news-tag">体制</span>
+        <p>オンライン資格確認・電子処方箋に対応しています。マイナ保険証もご利用いただけます。</p>
+      </li>
+      <li>
+        <time datetime="2026-04-01">2026.04.01</time>
+        <span class="news-tag">体制</span>
+        <p>医療DX推進体制整備加算を算定しています。質の高い医療提供に努めてまいります。</p>
+      </li>
+      <li>
+        <time datetime="2026-01-06">2026.01.06</time>
+        <span class="news-tag">在宅</span>
+        <p>ご来局が難しい方へ、薬剤師がご自宅までお薬をお届けする在宅対応を行っています。お気軽にご相談ください。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== ごあいさつ / About ===== -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-visual" aria-hidden="true">
+      <div class="about-photo">
+        <svg viewBox="0 0 400 320" role="img" aria-label="調剤のイメージ">
+          <rect width="400" height="320" rx="18" fill="#e9f1ee"/>
+          <rect x="40" y="60" width="120" height="180" rx="10" fill="#cfe3dc"/>
+          <rect x="56" y="78" width="88" height="20" rx="6" fill="#ffffff"/>
+          <rect x="56" y="110" width="88" height="12" rx="6" fill="#9cc6ba" opacity=".7"/>
+          <rect x="56" y="132" width="64" height="12" rx="6" fill="#9cc6ba" opacity=".5"/>
+          <circle cx="270" cy="120" r="58" fill="#2f8a7e"/>
+          <path d="M270 92v56M242 120h56" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
+          <rect x="210" y="200" width="150" height="60" rx="12" fill="#f3c98b"/>
+          <rect x="226" y="216" width="118" height="10" rx="5" fill="#fff" opacity=".85"/>
+          <rect x="226" y="234" width="80" height="10" rx="5" fill="#fff" opacity=".6"/>
+        </svg>
+      </div>
+      <span class="about-badge">地域に根ざして</span>
+    </div>
+
+    <div class="about-body">
+      <h2 class="section-title"><span class="en">GREETING</span>ごあいさつ</h2>
+      <p class="about-catch">「ここに来てよかった」と<br class="sp-only" />思っていただける薬局へ。</p>
+      <p class="about-text">
+        センター薬局は、愛媛県松山市会津町で地域のみなさまの健康を支える保険調剤薬局です。
+        全国どこの医療機関で発行された処方箋でもお受けし、お一人おひとりの体調や暮らしに合わせて、
+        ていねいな服薬説明と相談を心がけています。
+      </p>
+      <p class="about-text">
+        お薬の飲み合わせや副作用の不安、市販薬や健康についての小さな疑問まで、
+        どうぞお気軽にお声がけください。みなさまの「かかりつけ薬局」として、
+        安心して頼っていただける存在であり続けたいと願っています。
+      </p>
+      <p class="about-sign">
+        センター薬局　管理薬剤師　<b>田中 康夫</b>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== サービス / 特徴 ===== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head center">
+      <h2 class="section-title"><span class="en">SERVICES</span>センター薬局の取り組み</h2>
+      <p class="section-desc">安心してお薬を受け取っていただくために、さまざまな取り組みを行っています。</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <span class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M7 2h7l5 5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m6 1.5V8h4.5zM9 12h6v2H9zm0 4h6v2H9z"/></svg>
+        </span>
+        <h3>処方箋調剤</h3>
+        <p>全国どこの医療機関の処方箋もお受けします。薬歴に基づき、飲み合わせや重複を確認して安全にお渡しします。</p>
+      </article>
+
+      <article class="card">
+        <span class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 3 4 7v6c0 5 3.4 8.5 8 9 4.6-.5 8-4 8-9V7zm-1 5h2v3h3v2h-3v3h-2v-3H8v-2h3z"/></svg>
+        </span>
+        <h3>在宅服薬指導</h3>
+        <p>ご来局が難しい方へ、医師の指示のもと薬剤師がご自宅へお薬をお届けし、服薬の管理・指導を行います。</p>
+      </article>
+
+      <article class="card">
+        <span class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M4 5h16v3H4zm0 5h16v3H4zm0 5h10v3H4z"/></svg>
+        </span>
+        <h3>一包化・お薬整理</h3>
+        <p>たくさんのお薬を飲む方も安心。服用するタイミングごとに一つの袋にまとめ、飲み忘れ・飲み間違いを防ぎます。</p>
+      </article>
+
+      <article class="card">
+        <span class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2m-5 19a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4M17 17H7V5h10z"/></svg>
+        </span>
+        <h3>オンライン資格確認・電子処方箋</h3>
+        <p>マイナ保険証に対応。電子処方箋やオンライン資格確認により、よりスムーズで正確な調剤を行います。</p>
+      </article>
+
+      <article class="card">
+        <span class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m1 5h-2v6l5 3 1-1.7-4-2.3z"/></svg>
+        </span>
+        <h3>医療DXへの対応</h3>
+        <p>医療DX推進体制整備加算を算定。デジタルを活用し、質が高く効率的な医療提供体制づくりに取り組みます。</p>
+      </article>
+
+      <article class="card">
+        <span class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10m0 2c-4 0-8 2-8 5v3h16v-3c0-3-4-5-8-5"/></svg>
+        </span>
+        <h3>かかりつけ薬局</h3>
+        <p>お薬の記録を一元的に管理し、健康や市販薬の相談にも対応。地域のみなさまの身近な相談窓口です。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 在宅 CTA ===== -->
+<section class="home-cta" id="home">
+  <div class="container home-cta-inner">
+    <div class="home-cta-copy">
+      <h2 class="section-title light"><span class="en">HOME CARE</span>ご自宅まで、薬剤師がうかがいます</h2>
+      <p>
+        通院やご来局が難しい方も、どうぞご安心ください。
+        医師の指示のもと、薬剤師がご自宅へお薬をお届けし、
+        飲み方の説明や残薬の確認、体調のご相談まで対応いたします。
+        ご家族からのお問い合わせも歓迎しています。
+      </p>
+      <ul class="home-cta-points">
+        <li>お薬の宅配と服薬管理</li>
+        <li>残薬・飲み合わせの確認</li>
+        <li>ご家族・ケアマネジャー様との連携</li>
+      </ul>
+      <a href="tel:089-951-2330" class="btn btn-light">在宅について相談する</a>
+    </div>
+    <div class="home-cta-visual" aria-hidden="true">
+      <svg viewBox="0 0 320 280" role="img" aria-label="在宅対応のイメージ">
+        <rect width="320" height="280" rx="20" fill="rgba(255,255,255,.12)"/>
+        <path d="M70 150 L160 80 L250 150 V220 H70 Z" fill="rgba(255,255,255,.95)"/>
+        <rect x="120" y="170" width="40" height="50" fill="#2f8a7e"/>
+        <rect x="180" y="165" width="40" height="35" rx="4" fill="#cfe3dc"/>
+        <circle cx="160" cy="120" r="20" fill="#f3c98b"/>
+        <path d="M160 108v24M148 120h24" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 営業時間 ===== -->
+<section class="hours" id="hours">
+  <div class="container">
+    <div class="section-head center">
+      <h2 class="section-title"><span class="en">HOURS</span>営業時間</h2>
+      <p class="section-desc">日曜・祝日は休業しております。受付時間内にお越しください。</p>
+    </div>
+
+    <div class="hours-table-wrap">
+      <table class="hours-table">
+        <thead>
+          <tr>
+            <th>受付</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日祝</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>午前・午後</th>
+            <td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td class="x">—</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="hours-notes">
+        <li><span>月・火・木・金</span><b>9:00 – 18:00</b></li>
+        <li><span>水曜日</span><b>9:00 – 17:00</b></li>
+        <li><span>土曜日</span><b>9:00 – 16:00</b></li>
+        <li class="off"><span>日曜・祝日</span><b>休業</b></li>
+      </ul>
+      <p class="hours-emergency">
+        時間外の緊急のご連絡先
+        <a href="tel:090-8697-0180">090-8697-0180</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== アクセス ===== -->
+<section class="access" id="access">
+  <div class="container">
+    <div class="section-head center">
+      <h2 class="section-title"><span class="en">ACCESS</span>アクセス・薬局情報</h2>
+    </div>
+
+    <div class="access-grid">
+      <div class="access-info">
+        <dl>
+          <div><dt>薬局名</dt><dd>センター薬局</dd></div>
+          <div><dt>所在地</dt><dd>〒790-0954<br />愛媛県松山市会津町11番地</dd></div>
+          <div><dt>電話</dt><dd><a href="tel:089-951-2330">089-951-2330</a></dd></div>
+          <div><dt>FAX</dt><dd>089-951-2330</dd></div>
+          <div><dt>緊急連絡先</dt><dd><a href="tel:090-8697-0180">090-8697-0180</a></dd></div>
+          <div><dt>営業時間</dt><dd>月火木金 9:00–18:00／水 9:00–17:00／土 9:00–16:00</dd></div>
+          <div><dt>休業日</dt><dd>日曜・祝日</dd></div>
+        </dl>
+        <a class="btn btn-primary access-map-btn" href="https://www.google.com/maps/search/?api=1&query=愛媛県松山市会津町11" target="_blank" rel="noopener">
+          Googleマップで開く
+        </a>
+      </div>
+
+      <div class="access-map">
+        <iframe
+          title="センター薬局の地図"
+          src="https://maps.google.com/maps?q=%E6%84%9B%E5%AA%9B%E7%9C%8C%E6%9D%BE%E5%B1%B1%E5%B8%82%E4%BC%9A%E6%B4%A5%E7%94%BA11&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== お問い合わせ 帯 ===== -->
+<section class="contact-band">
+  <div class="container contact-band-inner">
+    <div>
+      <p class="contact-band-lead">お薬・健康のご相談はお気軽に</p>
+      <p class="contact-band-sub">受付時間内にお電話ください。在宅のご相談も承ります。</p>
+    </div>
+    <a href="tel:089-951-2330" class="contact-band-tel">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1z"/></svg>
+      <span>
+        <small>お電話でのお問い合わせ</small>
+        089-951-2330
+      </span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="36" height="36"><circle cx="24" cy="24" r="23" fill="#fff"/><path d="M24 11v26M11 24h26" stroke="#2f8a7e" stroke-width="5" stroke-linecap="round"/></svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">センター薬局</span>
+          <span class="brand-sub">CENTER PHARMACY</span>
+        </span>
+      </div>
+      <p class="footer-addr">〒790-0954　愛媛県松山市会津町11番地<br />TEL 089-951-2330 ／ FAX 089-951-2330</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="フッターメニュー">
+      <a href="#about">薬局について</a>
+      <a href="#services">サービス</a>
+      <a href="#home">在宅対応</a>
+      <a href="#hours">営業時間</a>
+      <a href="#access">アクセス</a>
+    </nav>
+  </div>
+  <p class="copyright">© <span id="year"></span> センター薬局 CENTER PHARMACY. All rights reserved.</p>
+</footer>
+
+<a href="#hero" class="to-top" id="toTop" aria-label="ページ上部へ戻る">
+  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 8l6 6-1.4 1.4L12 10.8 7.4 15.4 6 14z"/></svg>
+</a>
+
+<script>
+/* センター薬局 — interactions */
+(function () {
+  "use strict";
+
+  var header = document.getElementById("header");
+  var nav = document.getElementById("nav");
+  var toggle = document.getElementById("navToggle");
+  var toTop = document.getElementById("toTop");
+
+  /* ---- Header shadow + back-to-top on scroll ---- */
+  function onScroll() {
+    var y = window.scrollY || window.pageYOffset;
+    if (header) header.classList.toggle("scrolled", y > 8);
+    if (toTop) toTop.classList.toggle("show", y > 600);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* ---- Mobile menu ---- */
+  function closeMenu() {
+    if (!nav || !toggle) return;
+    nav.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "メニューを開く");
+  }
+  if (toggle && nav) {
+    toggle.addEventListener("click", function () {
+      var open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "メニューを閉じる" : "メニューを開く");
+    });
+    nav.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", closeMenu);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeMenu();
+    });
+  }
+
+  /* ---- Reveal on scroll ---- */
+  var targets = document.querySelectorAll(
+    ".news, .about-grid, .section-head, .card, .home-cta-copy, .home-cta-visual, .hours-table-wrap, .access-info, .access-map"
+  );
+  targets.forEach(function (el) { el.classList.add("reveal"); });
+
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry, i) {
+        if (entry.isIntersecting) {
+          // slight stagger for cards
+          var delay = entry.target.classList.contains("card") ? (i % 3) * 80 : 0;
+          setTimeout(function () { entry.target.classList.add("in"); }, delay);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    targets.forEach(function (el) { io.observe(el); });
+  } else {
+    targets.forEach(function (el) { el.classList.add("in"); });
+  }
+
+  /* ---- Current year ---- */
+  var year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
+})();
+
+</script>
+</body>
+</html>
