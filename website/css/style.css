@@ -162,8 +162,10 @@ main { position: relative; z-index: 1; }
 
 .hero { position: relative; z-index: 1; background: transparent; }
 /* 最初の画面：写真だけを見せる（文字なし） */
+/* 最初の画面は店舗写真だけ（次の情報パネルが覗かない高さ） */
 .hero-firstview {
-  min-height: calc(100svh - 72px);
+  min-height: 100vh;
+  min-height: 100svh;
 }
 
 /* スクロールで写真の上に現れる情報エリア */
