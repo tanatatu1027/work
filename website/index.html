@@ -48,44 +48,56 @@
   </div>
 </header>
 
+<!-- ===== 固定される店舗写真（背景） ===== -->
+<div class="hero-fixed" aria-hidden="true">
+  <img src="assets/img/hero.jpg" alt="" />
+  <div class="hero-fixed-overlay"></div>
+</div>
+
 <main>
 
 <!-- ===== Hero ===== -->
 <section class="hero" id="hero">
-  <div class="hero-media" aria-hidden="true">
-    <img src="assets/img/hero.jpg" alt="" />
-    <div class="hero-overlay"></div>
+  <!-- 最初の画面：写真のみ（文字は重ねない） -->
+  <div class="hero-firstview">
+    <a href="#hero-info" class="scroll-cue" aria-label="下にスクロールして情報を見る">
+      <span>SCROLL</span>
+      <i></i>
+    </a>
   </div>
 
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <p class="hero-eyebrow">愛媛県松山市会津町 ・ 保険調剤薬局</p>
-      <h1 class="hero-title">
-        どちらの処方箋でも、<br />
-        受け付けております。
-      </h1>
-      <p class="hero-lead">
-        センター薬局は、地域のみなさまの健康を支える松山市会津町のかかりつけ薬局です。
-        どちらの病院の処方箋もお受けし、在宅医療にも対応しています。
-      </p>
-      <div class="hero-actions">
-        <a href="tel:089-951-2330" class="btn btn-primary">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1z"/></svg>
-          電話でお問い合わせ
-        </a>
-        <a href="#access" class="btn btn-ghost">アクセス・地図</a>
+  <!-- スクロールすると写真の上に情報が現れる -->
+  <div class="hero-info" id="hero-info">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">愛媛県松山市会津町 ・ 保険調剤薬局</p>
+        <h1 class="hero-title">
+          どちらの処方箋でも、<br />
+          受け付けております。
+        </h1>
+        <p class="hero-lead">
+          センター薬局は、地域のみなさまの健康を支える松山市会津町のかかりつけ薬局です。
+          どちらの病院の処方箋もお受けし、在宅医療にも対応しています。
+        </p>
+        <div class="hero-actions">
+          <a href="tel:089-951-2330" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1z"/></svg>
+            電話でお問い合わせ
+          </a>
+          <a href="#access" class="btn btn-ghost">アクセス・地図</a>
+        </div>
       </div>
-    </div>
 
-    <div class="hero-card" aria-label="受付時間のご案内">
-      <p class="hero-card-title">受付時間のご案内</p>
-      <ul class="hero-card-list">
-        <li><span>月・火・木・金</span><b>9:00 – 18:00</b></li>
-        <li><span>水曜</span><b>9:00 – 17:00</b></li>
-        <li><span>土曜</span><b>9:00 – 16:00</b></li>
-        <li class="off"><span>日曜・祝日</span><b>休業</b></li>
-      </ul>
-      <a href="#hours" class="hero-card-link">営業時間の詳細 →</a>
+      <div class="hero-card" aria-label="受付時間のご案内">
+        <p class="hero-card-title">受付時間のご案内</p>
+        <ul class="hero-card-list">
+          <li><span>月・火・木・金</span><b>9:00 – 18:00</b></li>
+          <li><span>水曜</span><b>9:00 – 17:00</b></li>
+          <li><span>土曜</span><b>9:00 – 16:00</b></li>
+          <li class="off"><span>日曜・祝日</span><b>休業</b></li>
+        </ul>
+        <a href="#hours" class="hero-card-link">営業時間の詳細 →</a>
+      </div>
     </div>
   </div>
 </section>

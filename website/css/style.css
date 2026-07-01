@@ -41,6 +41,9 @@ body {
 a { color: inherit; text-decoration: none; }
 img, svg { display: block; max-width: 100%; }
 
+/* 本文は固定写真より前面に。各セクションの背景色が写真を覆う */
+main { position: relative; z-index: 1; }
+
 .container { width: min(var(--max), 92%); margin-inline: auto; }
 
 /* ---------- Buttons ---------- */
@@ -138,24 +141,36 @@ img, svg { display: block; max-width: 100%; }
 /* =========================================================
    Hero (photo)
    ========================================================= */
-.hero { position: relative; padding-top: 72px; overflow: hidden; min-height: 86vh; display: flex; align-items: center; }
-.hero-media { position: absolute; inset: 0; z-index: 0; background: #eef4f1; }
-.hero-media img {
+/* 店舗写真を画面に固定。最初は写真のみ、スクロールで情報が上に重なる */
+.hero-fixed { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; background: #eef4f1; }
+.hero-fixed img {
   width: 100%; height: 100%; object-fit: cover; object-position: center 40%;
-  /* 店舗写真を明るく・鮮やかに */
   filter: brightness(1.12) contrast(1.02) saturate(1.08);
 }
-.hero-overlay {
+.hero-fixed-overlay {
   position: absolute; inset: 0;
-  background:
-    linear-gradient(90deg, rgba(255,255,255,.28) 0%, rgba(255,255,255,.10) 40%, rgba(255,255,255,0) 68%),
-    linear-gradient(180deg, rgba(255,255,255,.10), rgba(20,60,54,.06));
+  background: linear-gradient(180deg, rgba(20,60,54,.06) 0%, rgba(20,60,54,.02) 45%, rgba(20,60,54,.20) 100%);
 }
+
+.hero { position: relative; z-index: 1; background: transparent; }
+/* 最初の画面：写真だけを見せる（文字なし） */
+.hero-firstview {
+  min-height: calc(100svh - 72px);
+  display: flex; align-items: flex-end; justify-content: center;
+  padding-bottom: 2.6rem;
+}
+.scroll-cue { display: flex; flex-direction: column; align-items: center; gap: .55rem; }
+.scroll-cue span { font-size: .66rem; letter-spacing: .3em; font-weight: 700; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.45); }
+.scroll-cue i { display: block; width: 1px; height: 46px; background: rgba(255,255,255,.45); position: relative; overflow: hidden; }
+.scroll-cue i::after { content: ""; position: absolute; left: 0; top: 0; width: 1px; height: 20px; background: #fff; animation: cue 1.9s cubic-bezier(.6,.04,.4,1) infinite; }
+@keyframes cue { 0% { transform: translateY(-24px); } 70%, 100% { transform: translateY(50px); } }
+
+/* スクロールで写真の上に現れる情報エリア */
+.hero-info { padding: clamp(1rem, 3vh, 2.5rem) 0 clamp(4rem, 9vh, 6.5rem); }
 .hero-inner {
   position: relative; z-index: 1;
   width: min(var(--max), 92%); margin-inline: auto;
   display: grid; grid-template-columns: 1.15fr .85fr; gap: 2.4rem; align-items: center;
-  padding: clamp(3rem, 7vw, 5.5rem) 0;
 }
 /* 文字は明るいすりガラスのパネルに濃い文字で乗せて読みやすく */
 .hero-copy {
@@ -387,9 +402,8 @@ img, svg { display: block; max-width: 100%; }
 .sp-only { display: none; }
 
 @media (max-width: 920px) {
-  .hero { min-height: 0; }
-  .hero-inner { grid-template-columns: 1fr; gap: 2.2rem; padding: 4rem 0; }
-  .hero-card { max-width: 460px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 1.6rem; }
+  .hero-copy, .hero-card { max-width: 560px; margin-inline: auto; width: 100%; }
   .payment-inner { grid-template-columns: 1fr; gap: 1.8rem; }
   .payment-visual { order: -1; }
   .home-cta-inner { grid-template-columns: 1fr; }

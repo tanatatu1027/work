@@ -39,7 +39,7 @@
 
   /* ---- Reveal on scroll ---- */
   var targets = document.querySelectorAll(
-    ".section-head, .feature-card, .payment-copy, .payment-visual, .home-cta-copy, .home-cta-visual, .news-list, .hours-table-wrap, .access-info, .access-map"
+    ".hero-copy, .hero-card, .section-head, .feature-card, .payment-copy, .payment-visual, .home-cta-copy, .home-cta-visual, .news-list, .hours-table-wrap, .access-info, .access-map"
   );
   targets.forEach(function (el) { el.classList.add("reveal"); });
 
