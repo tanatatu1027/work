@@ -39,7 +39,7 @@
 
   /* ---- Reveal on scroll ---- */
   var targets = document.querySelectorAll(
-    ".news, .about-grid, .section-head, .card, .home-cta-copy, .home-cta-visual, .hours-table-wrap, .access-info, .access-map"
+    ".section-head, .feature-card, .payment-copy, .payment-visual, .home-cta-copy, .home-cta-visual, .news-list, .hours-table-wrap, .access-info, .access-map"
   );
   targets.forEach(function (el) { el.classList.add("reveal"); });
 
@@ -48,7 +48,7 @@
       entries.forEach(function (entry, i) {
         if (entry.isIntersecting) {
           // slight stagger for cards
-          var delay = entry.target.classList.contains("card") ? (i % 3) * 80 : 0;
+          var delay = entry.target.classList.contains("feature-card") ? (i % 3) * 80 : 0;
           setTimeout(function () { entry.target.classList.add("in"); }, delay);
           io.unobserve(entry.target);
         }
