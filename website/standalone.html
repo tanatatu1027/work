@@ -184,14 +184,7 @@ main { position: relative; z-index: 1; }
 /* 最初の画面：写真だけを見せる（文字なし） */
 .hero-firstview {
   min-height: calc(100svh - 72px);
-  display: flex; align-items: flex-end; justify-content: center;
-  padding-bottom: 2.6rem;
 }
-.scroll-cue { display: flex; flex-direction: column; align-items: center; gap: .55rem; }
-.scroll-cue span { font-size: .66rem; letter-spacing: .3em; font-weight: 700; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.45); }
-.scroll-cue i { display: block; width: 1px; height: 46px; background: rgba(255,255,255,.45); position: relative; overflow: hidden; }
-.scroll-cue i::after { content: ""; position: absolute; left: 0; top: 0; width: 1px; height: 20px; background: #fff; animation: cue 1.9s cubic-bezier(.6,.04,.4,1) infinite; }
-@keyframes cue { 0% { transform: translateY(-24px); } 70%, 100% { transform: translateY(50px); } }
 
 /* スクロールで写真の上に現れる情報エリア */
 .hero-info { padding: clamp(1rem, 3vh, 2.5rem) 0 clamp(4rem, 9vh, 6.5rem); }
@@ -511,12 +504,7 @@ main { position: relative; z-index: 1; }
 <!-- ===== Hero ===== -->
 <section class="hero" id="hero">
   <!-- 最初の画面：写真のみ（文字は重ねない） -->
-  <div class="hero-firstview">
-    <a href="#hero-info" class="scroll-cue" aria-label="下にスクロールして情報を見る">
-      <span>SCROLL</span>
-      <i></i>
-    </a>
-  </div>
+  <div class="hero-firstview"></div>
 
   <!-- スクロールすると写真の上に情報が現れる -->
   <div class="hero-info" id="hero-info">
