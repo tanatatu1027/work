@@ -149,7 +149,15 @@ main { position: relative; z-index: 1; }
 }
 .hero-fixed-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(20,60,54,.06) 0%, rgba(20,60,54,.02) 45%, rgba(20,60,54,.20) 100%);
+  /* 常時のごく薄いグラデ（SCROLL表示の可読性用） */
+  background: linear-gradient(180deg, rgba(20,60,54,.04) 0%, rgba(20,60,54,.02) 45%, rgba(20,60,54,.18) 100%);
+}
+/* スクロール量に応じて濃くなる暗幕（JSで opacity を制御）→ 情報の文字が見やすくなる */
+.hero-fixed-veil {
+  position: absolute; inset: 0;
+  background: #123a34;
+  opacity: 0;
+  transition: opacity .12s linear;
 }
 
 .hero { position: relative; z-index: 1; background: transparent; }
@@ -350,24 +358,11 @@ main { position: relative; z-index: 1; }
 .access-map iframe { width: 100%; height: 100%; min-height: 360px; border: 0; }
 
 /* =========================================================
-   Contact band
+   Footer（薬局情報 → お問い合わせCTA）
+   固定写真より前面に置き、最下部で写真がはみ出さないようにする
    ========================================================= */
-.contact-band { background: var(--green-deep); color: #fff; padding: 2.6rem 0; }
-.contact-band-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.6rem; flex-wrap: wrap; }
-.contact-band-lead { font-family: var(--serif); font-size: 1.4rem; font-weight: 600; }
-.contact-band-sub { color: rgba(255,255,255,.85); font-size: .92rem; margin-top: .3rem; }
-.contact-band-tel {
-  display: flex; align-items: center; gap: .9rem; background: #fff; color: var(--green-deep);
-  padding: .9rem 1.6rem; border-radius: 14px; font-family: var(--serif); font-weight: 700; font-size: 1.7rem;
-  box-shadow: var(--shadow-md); transition: transform .25s ease;
-}
-.contact-band-tel:hover { transform: translateY(-2px); }
-.contact-band-tel small { display: block; font-family: var(--sans); font-size: .62rem; font-weight: 700; color: var(--ink-soft); letter-spacing: .1em; }
-
-/* =========================================================
-   Footer
-   ========================================================= */
-.site-footer { background: #20312d; color: rgba(255,255,255,.8); padding: 3rem 0 1.4rem; }
+.site-footer { position: relative; z-index: 1; background: #20312d; color: rgba(255,255,255,.8); }
+.footer-meta { padding: 3rem 0 1.4rem; }
 .footer-inner { display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
 .footer-logo { height: 40px; width: auto; }
 .footer-addr { margin-top: 1rem; font-size: .85rem; line-height: 1.9; }
@@ -378,6 +373,19 @@ main { position: relative; z-index: 1; }
   text-align: center; font-size: .76rem; color: rgba(255,255,255,.5);
   margin-top: 2.4rem; padding-top: 1.4rem; border-top: 1px solid rgba(255,255,255,.12);
 }
+
+/* お問い合わせ CTA（ページ最下部） */
+.footer-cta { background: var(--green-deep); color: #fff; padding: 2.8rem 0; }
+.contact-band-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.6rem; flex-wrap: wrap; }
+.contact-band-lead { font-family: var(--serif); font-size: 1.4rem; font-weight: 600; }
+.contact-band-sub { color: rgba(255,255,255,.85); font-size: .92rem; margin-top: .3rem; }
+.contact-band-tel {
+  display: flex; align-items: center; gap: .9rem; background: #fff; color: var(--green-deep);
+  padding: .9rem 1.6rem; border-radius: 14px; font-family: var(--serif); font-weight: 700; font-size: 1.7rem;
+  box-shadow: var(--shadow-md); transition: transform .25s ease;
+}
+.contact-band-tel:hover { transform: translateY(-2px); }
+.contact-band-tel small { display: block; font-family: var(--sans); font-size: .62rem; font-weight: 700; color: var(--ink-soft); letter-spacing: .1em; }
 
 /* ---------- To top ---------- */
 .to-top {

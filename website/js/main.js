@@ -7,13 +7,24 @@
   var toggle = document.getElementById("navToggle");
   var toTop = document.getElementById("toTop");
 
-  /* ---- Header shadow + back-to-top on scroll ---- */
+  var heroVeil = document.getElementById("heroVeil");
+
+  /* ---- Header shadow + back-to-top + hero veil on scroll ---- */
   function onScroll() {
     var y = window.scrollY || window.pageYOffset;
     if (header) header.classList.toggle("scrolled", y > 8);
     if (toTop) toTop.classList.toggle("show", y > 600);
+
+    /* スクロールが進むほど店舗写真を暗くして、重なる情報の文字を見やすくする */
+    if (heroVeil) {
+      var vh = window.innerHeight || 800;
+      var t = (y - vh * 0.10) / (vh * 0.62);
+      t = t < 0 ? 0 : t > 1 ? 1 : t;
+      heroVeil.style.opacity = (t * 0.68).toFixed(3);
+    }
   }
   window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
   onScroll();
 
   /* ---- Mobile menu ---- */
